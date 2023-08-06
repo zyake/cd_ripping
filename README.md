@@ -1,5 +1,5 @@
 # cd_ripping
-CD ripping for self-use
+CD ripping scripts for self-use
 
 # Dependencies
 
