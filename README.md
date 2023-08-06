@@ -5,6 +5,7 @@ CD ripping scripts for self-use
 
 - cdparanoia
 - lame
+- id3tool
 - node.js
 
 # Usage
