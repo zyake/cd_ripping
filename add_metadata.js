@@ -1,6 +1,5 @@
 /*
-   put_metadata_to_mp3_files
-
+   Add metadata into MP3 files and rename them.
    - arg1: CD alubm
    - arg2: CD artist
    - arg3: title list file name
