@@ -33,7 +33,7 @@ const mp3DiretoryName = process.argv[5];
             return;
         }
 
-        const id3toolCommand = `id3tool -a ${album} -r ${artist} -t ${title} ${mp3DiretoryName}/${mp3File}`;
+        const id3toolCommand = `id3tool -a "${album}" -r "${artist}" -t "${title}" ${mp3DiretoryName}/${mp3File}`;
         console.log("executing a command...: " + id3toolCommand);
         const execStdout = childProcess.execSync(id3toolCommand);
         console.log("exec stdout:" + execStdout);
