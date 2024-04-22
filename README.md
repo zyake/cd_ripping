@@ -5,7 +5,7 @@ CD ripping scripts for self-use
 
 - cdparanoia
 - lame
-- id3tool
+- id3edit https://github.com/rstemmer/id3edit
 - node.js
 
 # Usage
