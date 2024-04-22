@@ -28,12 +28,15 @@ const mp3DiretoryName = process.argv[5];
     const allFileContents = fs.readFileSync(titlePath, "utf-8");
     allFileContents.split(/\r?\n/).forEach(title =>  {
         const mp3File = mp3Files[titleIndex++];
+        if (mp3File == null) {
+           return;
+        }
         if (!mp3File.endsWith(".mp3")) {
             console.log("skipping...:" + mp3File);
             return;
         }
 
-        const id3toolCommand = `id3tool -a "${album}" -r "${artist}" -t "${title}" ${mp3DiretoryName}/${mp3File}`;
+        const id3toolCommand = `id3edit --set-album "${album}" --set-artist "${artist}" --set-name "${title}" --create ${mp3DiretoryName}/${mp3File}`;
         console.log("executing a command...: " + id3toolCommand);
         const execStdout = childProcess.execSync(id3toolCommand);
         console.log("exec stdout:" + execStdout);
@@ -44,3 +47,4 @@ const mp3DiretoryName = process.argv[5];
     });
 
 })();
+      
